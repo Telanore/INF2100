@@ -44,14 +44,15 @@ class AspList extends AspAtom{
             exprs.get(i).prettyPrint();
             Main.log.prettyWrite(", ");
         }
-        exprs.get(exprs.size()-1).prettyPrint();
+        if(exprs.size() > 0) exprs.get(exprs.size()-1).prettyPrint();
         Main.log.prettyWrite("]");
     }
 
 
     @Override
     RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
-        //-- Must be changed in part 3:
-        return null;
+        ArrayList<RuntimeValue> ret = new ArrayList<>();
+        for(AspExpr ae: exprs) ret.add(ae.eval(curScope));
+        return new RuntimeListValue(ret);
     }
 }

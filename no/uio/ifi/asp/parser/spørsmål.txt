@@ -1,2 +1,0 @@
-Skal newline håndteres? Ha skjer på eof?
-Hvordan skille mellom funksjonskall og funksjonsdef?

@@ -9,7 +9,7 @@ import static no.uio.ifi.asp.scanner.TokenKind.*;
 
 class AspBoolean extends AspAtom{
 
-    protected Token t;
+    protected TokenKind tk;
 
     public AspBoolean(int n){
         super(n);
@@ -19,7 +19,7 @@ class AspBoolean extends AspAtom{
         enterParser(" boolean ");
         AspBoolean ab = new AspBoolean(s.curLineNum());
         
-        ab.t = s.curToken();
+        ab.tk = s.curToken().kind;
         skip(s, s.curToken().kind);
 
         leaveParser(" boolean ");
@@ -29,14 +29,14 @@ class AspBoolean extends AspAtom{
 
     @Override
     public void prettyPrint() {
-        if(t.kind == trueToken) Main.log.prettyWrite("True");
+        if(tk == trueToken) Main.log.prettyWrite("True");
         else Main.log.prettyWrite("False");
     }
 
 
     @Override
     RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
-        //-- Must be changed in part 3:
-        return null;
+        if(tk == trueToken) return new RuntimeBoolValue(true);
+        else return new RuntimeBoolValue(false);
     }
 }

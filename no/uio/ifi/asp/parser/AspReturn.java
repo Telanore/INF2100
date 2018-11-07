@@ -24,6 +24,10 @@ class AspReturn extends AspStmt{
         skip(s, returnToken);
         ar.expr = AspExpr.parse(s);
 
+        while(s.curToken().kind == newLineToken){
+            skip(s, newLineToken);
+        }
+
         leaveParser(" return ");
         return ar;
     }

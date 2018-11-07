@@ -1,13 +1,14 @@
 package no.uio.ifi.asp.parser;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import no.uio.ifi.asp.main.*;
 import no.uio.ifi.asp.runtime.*;
 import no.uio.ifi.asp.scanner.*;
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
-class AspDict extends AspAtom{
+public class AspDict extends AspAtom{
 
     protected ArrayList<AspString> names = new ArrayList<>();
     protected ArrayList<AspExpr> exprs = new ArrayList<>();
@@ -21,11 +22,13 @@ class AspDict extends AspAtom{
         enterParser(" dict ");
         AspDict ad = new AspDict(s.curLineNum());
         
-        skip(s, s.curToken().kind);
+        skip(s, leftBraceToken);
 
         if(s.curToken().kind != rightBraceToken){
             while(true){
-                if(s.curToken().kind != stringToken) parserError("Expected string literal, but found "+s.curToken().kind, s.curLineNum());
+                if(s.curToken().kind != stringToken){ 
+                    parserError("Expected string literal, but found "+s.curToken().kind, s.curLineNum());
+                }
                 ad.names.add(AspString.parse(s));
                 skip(s, colonToken);
                 ad.exprs.add(AspExpr.parse(s));
@@ -34,7 +37,7 @@ class AspDict extends AspAtom{
             }
 
         }
-        
+        skip(s, rightBraceToken);
 
         leaveParser(" dict ");
         return ad;
@@ -59,7 +62,10 @@ class AspDict extends AspAtom{
 
     @Override
     RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
-        //-- Must be changed in part 3:
-        return null;
+        HashMap<RuntimeValue, RuntimeValue> rtVals = new HashMap<>();
+        for(int i = 0; i < names.size(); i++){
+            rtVals.put(names.get(i).eval(curScope), exprs.get(i).eval(curScope));
+        }
+        return new RuntimeDictValue(rtVals);
     }
 }

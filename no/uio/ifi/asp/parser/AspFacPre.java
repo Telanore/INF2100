@@ -32,9 +32,8 @@ class AspFacPre extends AspSyntax{
 
     @Override
     public void prettyPrint() {
-        Main.log.prettyWrite("FACPRE");
-        if(prefix == plusToken) Main.log.prettyWrite(" + ");
-        else if(prefix == minusToken) Main.log.prettyWrite(" - ");
+        if(prefix == plusToken) Main.log.prettyWrite("+");
+        else if(prefix == minusToken) Main.log.prettyWrite("-");
     }
 
 

@@ -1,0 +1,2 @@
+Hva skal eval i TermOp gjøre?
+Hvorfor breake i f.eks AspTerm.eval?

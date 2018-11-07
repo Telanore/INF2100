@@ -8,7 +8,6 @@ import no.uio.ifi.asp.scanner.*;
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
 public class AspExpr extends AspSyntax{
-    //-- Must be changed in part 2:
     ArrayList<AspAndTest> andTests = new ArrayList<>();
 
     AspExpr(int n) {
@@ -36,16 +35,27 @@ public class AspExpr extends AspSyntax{
 
     @Override
     public void prettyPrint() {
+        int nPrinted = 0;
 
         for(AspAndTest aat: andTests){
+            if(nPrinted > 0) Main.log.prettyWrite(" or ");
             aat.prettyPrint();
+            ++nPrinted;
         }
     }
 
 
     @Override
     public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
-        //-- Must be changed in part 3:
-        return null;
+        RuntimeValue v = andTests.get(0).eval(curScope);
+        for(int i = 1; i < andTests.size(); i++){
+            RuntimeValue w = andTests.get(i).eval(curScope);
+            if(v.getBoolValue("|| operand", this) || w.getBoolValue("|| operand", this)){
+                v = new RuntimeBoolValue(true);
+            }else{
+                return new RuntimeBoolValue(false);
+            }
+        }
+        return v;
     }
 }

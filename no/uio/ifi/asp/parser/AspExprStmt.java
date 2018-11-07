@@ -22,6 +22,10 @@ class AspExprStmt extends AspStmt {
 
         aes.expr = AspExpr.parse(s);
         
+        while(s.curToken().kind == newLineToken){
+            skip(s, newLineToken);
+        }
+        
         leaveParser(" expr stmt ");
         return aes;
     }

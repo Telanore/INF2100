@@ -47,8 +47,9 @@ class AspArg extends AspPrimSuf{
 
     @Override
     RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
-        //-- Must be changed in part 3:
-        return null;
+        ArrayList<RuntimeValue> vals = new ArrayList<>();
+        for(AspExpr ae: exprs) vals.add(ae.eval(curScope));
+        return new RuntimeListValue(vals);
     }
 
 }

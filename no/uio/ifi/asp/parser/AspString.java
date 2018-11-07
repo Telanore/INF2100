@@ -7,7 +7,7 @@ import no.uio.ifi.asp.runtime.*;
 import no.uio.ifi.asp.scanner.*;
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
-class AspString extends AspAtom{
+public class AspString extends AspAtom{
 
     protected Token t;
 
@@ -34,9 +34,9 @@ class AspString extends AspAtom{
 
 
     @Override
-    RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
+    public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
         //-- Must be changed in part 3:
-        return null;
+        return new RuntimeStringValue(t.stringLit);
     }
 }
 

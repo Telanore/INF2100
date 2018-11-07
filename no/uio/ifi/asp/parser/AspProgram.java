@@ -21,14 +21,6 @@ public class AspProgram extends AspSyntax {
 
         AspProgram ap = new AspProgram(s.curLineNum());
         while (s.curToken().kind != eofToken) {
-            //-- Must be changed in part 2:
-            while(s.curToken().kind == newLineToken){
-                skip(s, newLineToken);
-            }
-            while(s.curToken().kind == dedentToken){
-                skip(s, dedentToken);
-            }
-            
             if(s.curToken().kind == eofToken) break;
             else ap.stmts.add(AspStmt.parse(s));
         }

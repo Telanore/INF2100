@@ -10,7 +10,8 @@ import static no.uio.ifi.asp.scanner.TokenKind.*;
 class AspAssign extends AspStmt{
 
     AspName name;
-    AspExpr subscr, expr;
+    AspSubs subscr;
+    AspExpr expr;
 
     
     public AspAssign(int n){
@@ -28,13 +29,17 @@ class AspAssign extends AspStmt{
         }
         aa.name = AspName.parse(s);
         
-        if(s.curToken().kind == leftBracketToken){
-            aa.subscr = AspExpr.parse(s);
+        while(s.curToken().kind == leftBracketToken){
+            aa.subscr = AspSubs.parse(s);
         }
 
         skip(s, equalToken);
         aa.expr = AspExpr.parse(s);
     
+        while(s.curToken().kind == newLineToken){
+            skip(s, newLineToken);
+        }
+
         leaveParser(" assign ");
         return aa;
     }

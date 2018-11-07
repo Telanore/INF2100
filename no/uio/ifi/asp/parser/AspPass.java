@@ -20,6 +20,10 @@ class AspPass extends AspStmt{
 
         skip(s, passToken);
         
+        while(s.curToken().kind == newLineToken){
+            skip(s, newLineToken);
+        }
+
         leaveParser(" pass ");
         return ap;
     }
