@@ -94,9 +94,9 @@ public class RuntimeFloatValue extends RuntimeValue {
     @Override
     public RuntimeValue evalIntDivide(RuntimeValue v, AspSyntax where){
         if(v instanceof RuntimeFloatValue){
-            return new RuntimeFloatValue((long) value / v.getFloatValue("// op", where));
+            return new RuntimeFloatValue((long)(value / v.getFloatValue("// op", where)));
         }else if(v instanceof RuntimeIntValue){
-            return new RuntimeFloatValue(value / v.getIntValue("// op", where));
+            return new RuntimeFloatValue((long)(value / v.getIntValue("// op", where)));
         }
         runtimeError("Type error for //.", where);
         return null;
@@ -105,9 +105,13 @@ public class RuntimeFloatValue extends RuntimeValue {
     @Override
     public RuntimeValue evalModulo(RuntimeValue v, AspSyntax where){
         if(v instanceof RuntimeFloatValue){
-            return new RuntimeFloatValue(value % v.getFloatValue("% op", where));
+            double x = v.getFloatValue("% op", where);
+            double mod = value-x*Math.floor(value/x);
+            return new RuntimeFloatValue(mod);
         }else if(v instanceof RuntimeIntValue){
-            return new RuntimeFloatValue(value % v.getIntValue("% op", where));
+            int x = (int)v.getIntValue("% op", where);
+            double mod = value-x*Math.floor(value/x);
+            return new RuntimeFloatValue(mod);
         }
         runtimeError("Type error for %.", where);
         return null;
@@ -119,6 +123,8 @@ public class RuntimeFloatValue extends RuntimeValue {
             return new RuntimeBoolValue(value == v.getFloatValue("== op", where));
         }else if(v instanceof RuntimeIntValue){
             return new RuntimeBoolValue(value == v.getIntValue("== op", where));
+        }else if(v instanceof RuntimeNoneValue){
+            return new RuntimeBoolValue(false);
         }
         runtimeError("Type error for ==.", where);
         return null;

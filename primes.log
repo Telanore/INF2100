@@ -1,0 +1,1229 @@
+< program >
+   1: # Finn alle primtall opp til n
+   2: # ved hjelp av teknikken kalt «Eratosthenes' sil».
+   3: 
+   4: n = 1000
+  < statement >
+    < assign >
+      < name >
+      </ name >
+      < expr >
+        < and test >
+          < not test >
+            < comparison >
+              < term >
+                < factor >
+                  < primary >
+                    < atom >
+                      < integer >
+                      </ integer >
+                    </ atom >
+                  </ primary >
+                </ factor >
+              </ term >
+            </ comparison >
+          </ not test >
+        </ and test >
+      </ expr >
+   5: primes = [True] * (n+1)
+    </ assign >
+  </ statement >
+  < statement >
+    < assign >
+      < name >
+      </ name >
+      < expr >
+        < and test >
+          < not test >
+            < comparison >
+              < term >
+                < factor >
+                  < primary >
+                    < atom >
+                      < list >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < boolean >
+                                        </ boolean >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                      </ list >
+                    </ atom >
+                  </ primary >
+                  < factor op >
+                  </ factor op >
+                  < primary >
+                    < atom >
+                      < inner expr >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < name >
+                                        </ name >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                  < term op >
+                                  </ term op >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                      </ inner expr >
+                    </ atom >
+                  </ primary >
+                </ factor >
+              </ term >
+            </ comparison >
+          </ not test >
+        </ and test >
+      </ expr >
+   6: 
+   7: def find_primes():
+    </ assign >
+  </ statement >
+  < statement >
+    < func def >
+      < name >
+      </ name >
+      < suite >
+   8:    for i1 in range(2,n+1):
+        < statement >
+          < for >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < name >
+                            </ name >
+                          </ atom >
+                          < primary suffix >
+                            < argument >
+                              < expr >
+                                < and test >
+                                  < not test >
+                                    < comparison >
+                                      < term >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < integer >
+                                              </ integer >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                      </ term >
+                                    </ comparison >
+                                  </ not test >
+                                </ and test >
+                              </ expr >
+                              < expr >
+                                < and test >
+                                  < not test >
+                                    < comparison >
+                                      < term >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < integer >
+                                              </ integer >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                      </ term >
+                                    </ comparison >
+                                  </ not test >
+                                </ and test >
+                              </ expr >
+                            </ argument >
+                          </ primary suffix >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+            < suite >
+   9:       i2 = 2 * i1
+              < statement >
+                < assign >
+                  < name >
+                  </ name >
+                  < expr >
+                    < and test >
+                      < not test >
+                        < comparison >
+                          < term >
+                            < factor >
+                              < primary >
+                                < atom >
+                                  < integer >
+                                  </ integer >
+                                </ atom >
+                              </ primary >
+                              < factor op >
+                              </ factor op >
+                              < primary >
+                                < atom >
+                                  < name >
+                                  </ name >
+                                </ atom >
+                              </ primary >
+                            </ factor >
+                          </ term >
+                        </ comparison >
+                      </ not test >
+                    </ and test >
+                  </ expr >
+  10:       while i2 <= n:
+                </ assign >
+              </ statement >
+              < statement >
+                < while >
+                  < expr >
+                    < and test >
+                      < not test >
+                        < comparison >
+                          < term >
+                            < factor >
+                              < primary >
+                                < atom >
+                                  < name >
+                                  </ name >
+                                </ atom >
+                              </ primary >
+                            </ factor >
+                          </ term >
+                          < comp op >
+                          </ comp op >
+                          < term >
+                            < factor >
+                              < primary >
+                                < atom >
+                                  < name >
+                                  </ name >
+                                </ atom >
+                              </ primary >
+                            </ factor >
+                          </ term >
+                        </ comparison >
+                      </ not test >
+                    </ and test >
+                  </ expr >
+                  < suite >
+  11:          primes[i2] = False
+                    < statement >
+                      < assign >
+                        < name >
+                        </ name >
+                        < subscrpt >
+                          < expr >
+                            < and test >
+                              < not test >
+                                < comparison >
+                                  < term >
+                                    < factor >
+                                      < primary >
+                                        < atom >
+                                          < name >
+                                          </ name >
+                                        </ atom >
+                                      </ primary >
+                                    </ factor >
+                                  </ term >
+                                </ comparison >
+                              </ not test >
+                            </ and test >
+                          </ expr >
+                        </ subscrpt >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < boolean >
+                                        </ boolean >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+  12:          i2 = i2 + i1
+                      </ assign >
+                    </ statement >
+                    < statement >
+                      < assign >
+                        < name >
+                        </ name >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < name >
+                                        </ name >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                  < term op >
+                                  </ term op >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < name >
+                                        </ name >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+  13: 
+  14: def w4(n):
+                      </ assign >
+                    </ statement >
+                  </ suite >
+                </ while >
+              </ statement >
+            </ suite >
+          </ for >
+        </ statement >
+      </ suite >
+    </ func def >
+  </ statement >
+  < statement >
+    < func def >
+      < name >
+      </ name >
+      < name >
+      </ name >
+      < suite >
+  15:     if n <= 9:
+        < statement >
+          < if >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < name >
+                            </ name >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                    < comp op >
+                    </ comp op >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+            < suite >
+  16:         return '   ' + str(n)
+              < statement >
+                < return >
+                  < expr >
+                    < and test >
+                      < not test >
+                        < comparison >
+                          < term >
+                            < factor >
+                              < primary >
+                                < atom >
+                                  < string >
+                                  </ string >
+                                </ atom >
+                              </ primary >
+                            </ factor >
+                            < term op >
+                            </ term op >
+                            < factor >
+                              < primary >
+                                < atom >
+                                  < name >
+                                  </ name >
+                                </ atom >
+                                < primary suffix >
+                                  < argument >
+                                    < expr >
+                                      < and test >
+                                        < not test >
+                                          < comparison >
+                                            < term >
+                                              < factor >
+                                                < primary >
+                                                  < atom >
+                                                    < name >
+                                                    </ name >
+                                                  </ atom >
+                                                </ primary >
+                                              </ factor >
+                                            </ term >
+                                          </ comparison >
+                                        </ not test >
+                                      </ and test >
+                                    </ expr >
+                                  </ argument >
+                                </ primary suffix >
+                              </ primary >
+                            </ factor >
+                          </ term >
+                        </ comparison >
+                      </ not test >
+                    </ and test >
+                  </ expr >
+  17:     elif n <= 99:
+                </ return >
+              </ statement >
+            </ suite >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < name >
+                            </ name >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                    < comp op >
+                    </ comp op >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+            < suite >
+  18:         return '  ' + str(n)
+              < statement >
+                < return >
+                  < expr >
+                    < and test >
+                      < not test >
+                        < comparison >
+                          < term >
+                            < factor >
+                              < primary >
+                                < atom >
+                                  < string >
+                                  </ string >
+                                </ atom >
+                              </ primary >
+                            </ factor >
+                            < term op >
+                            </ term op >
+                            < factor >
+                              < primary >
+                                < atom >
+                                  < name >
+                                  </ name >
+                                </ atom >
+                                < primary suffix >
+                                  < argument >
+                                    < expr >
+                                      < and test >
+                                        < not test >
+                                          < comparison >
+                                            < term >
+                                              < factor >
+                                                < primary >
+                                                  < atom >
+                                                    < name >
+                                                    </ name >
+                                                  </ atom >
+                                                </ primary >
+                                              </ factor >
+                                            </ term >
+                                          </ comparison >
+                                        </ not test >
+                                      </ and test >
+                                    </ expr >
+                                  </ argument >
+                                </ primary suffix >
+                              </ primary >
+                            </ factor >
+                          </ term >
+                        </ comparison >
+                      </ not test >
+                    </ and test >
+                  </ expr >
+  19:     elif n <= 999:
+                </ return >
+              </ statement >
+            </ suite >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < name >
+                            </ name >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                    < comp op >
+                    </ comp op >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+            < suite >
+  20:         return ' ' + str(n)
+              < statement >
+                < return >
+                  < expr >
+                    < and test >
+                      < not test >
+                        < comparison >
+                          < term >
+                            < factor >
+                              < primary >
+                                < atom >
+                                  < string >
+                                  </ string >
+                                </ atom >
+                              </ primary >
+                            </ factor >
+                            < term op >
+                            </ term op >
+                            < factor >
+                              < primary >
+                                < atom >
+                                  < name >
+                                  </ name >
+                                </ atom >
+                                < primary suffix >
+                                  < argument >
+                                    < expr >
+                                      < and test >
+                                        < not test >
+                                          < comparison >
+                                            < term >
+                                              < factor >
+                                                < primary >
+                                                  < atom >
+                                                    < name >
+                                                    </ name >
+                                                  </ atom >
+                                                </ primary >
+                                              </ factor >
+                                            </ term >
+                                          </ comparison >
+                                        </ not test >
+                                      </ and test >
+                                    </ expr >
+                                  </ argument >
+                                </ primary suffix >
+                              </ primary >
+                            </ factor >
+                          </ term >
+                        </ comparison >
+                      </ not test >
+                    </ and test >
+                  </ expr >
+  21:     else:
+                </ return >
+              </ statement >
+            </ suite >
+            < suite >
+  22:         return str(n)
+              < statement >
+                < return >
+                  < expr >
+                    < and test >
+                      < not test >
+                        < comparison >
+                          < term >
+                            < factor >
+                              < primary >
+                                < atom >
+                                  < name >
+                                  </ name >
+                                </ atom >
+                                < primary suffix >
+                                  < argument >
+                                    < expr >
+                                      < and test >
+                                        < not test >
+                                          < comparison >
+                                            < term >
+                                              < factor >
+                                                < primary >
+                                                  < atom >
+                                                    < name >
+                                                    </ name >
+                                                  </ atom >
+                                                </ primary >
+                                              </ factor >
+                                            </ term >
+                                          </ comparison >
+                                        </ not test >
+                                      </ and test >
+                                    </ expr >
+                                  </ argument >
+                                </ primary suffix >
+                              </ primary >
+                            </ factor >
+                          </ term >
+                        </ comparison >
+                      </ not test >
+                    </ and test >
+                  </ expr >
+  23:    
+  24: 
+  25: def list_primes():
+                </ return >
+              </ statement >
+            </ suite >
+          </ if >
+        </ statement >
+      </ suite >
+    </ func def >
+  </ statement >
+  < statement >
+    < func def >
+      < name >
+      </ name >
+      < suite >
+  26:     n_printed = 0
+        < statement >
+          < assign >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+  27:     line_buf = ''
+          </ assign >
+        </ statement >
+        < statement >
+          < assign >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < string >
+                            </ string >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+  28:     for i in range(2,n+1):
+          </ assign >
+        </ statement >
+        < statement >
+          < for >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < name >
+                            </ name >
+                          </ atom >
+                          < primary suffix >
+                            < argument >
+                              < expr >
+                                < and test >
+                                  < not test >
+                                    < comparison >
+                                      < term >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < integer >
+                                              </ integer >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                      </ term >
+                                    </ comparison >
+                                  </ not test >
+                                </ and test >
+                              </ expr >
+                              < expr >
+                                < and test >
+                                  < not test >
+                                    < comparison >
+                                      < term >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < integer >
+                                              </ integer >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                      </ term >
+                                    </ comparison >
+                                  </ not test >
+                                </ and test >
+                              </ expr >
+                            </ argument >
+                          </ primary suffix >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+            < suite >
+  29:        if primes[i]:
+              < statement >
+                < if >
+                  < expr >
+                    < and test >
+                      < not test >
+                        < comparison >
+                          < term >
+                            < factor >
+                              < primary >
+                                < atom >
+                                  < name >
+                                  </ name >
+                                </ atom >
+                                < primary suffix >
+                                  < subscrpt >
+                                    < expr >
+                                      < and test >
+                                        < not test >
+                                          < comparison >
+                                            < term >
+                                              < factor >
+                                                < primary >
+                                                  < atom >
+                                                    < name >
+                                                    </ name >
+                                                  </ atom >
+                                                </ primary >
+                                              </ factor >
+                                            </ term >
+                                          </ comparison >
+                                        </ not test >
+                                      </ and test >
+                                    </ expr >
+                                  </ subscrpt >
+                                </ primary suffix >
+                              </ primary >
+                            </ factor >
+                          </ term >
+                        </ comparison >
+                      </ not test >
+                    </ and test >
+                  </ expr >
+                  < suite >
+  30:           if n_printed > 0 and n_printed % 10 == 0:
+                    < statement >
+                      < if >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < name >
+                                        </ name >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                                < comp op >
+                                </ comp op >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < name >
+                                        </ name >
+                                      </ atom >
+                                    </ primary >
+                                    < factor op >
+                                    </ factor op >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                                < comp op >
+                                </ comp op >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                        < suite >
+  31:              print(line_buf)
+                          < statement >
+                            < expr stmt >
+                              < expr >
+                                < and test >
+                                  < not test >
+                                    < comparison >
+                                      < term >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                            < primary suffix >
+                                              < argument >
+                                                < expr >
+                                                  < and test >
+                                                    < not test >
+                                                      < comparison >
+                                                        < term >
+                                                          < factor >
+                                                            < primary >
+                                                              < atom >
+                                                                < name >
+                                                                </ name >
+                                                              </ atom >
+                                                            </ primary >
+                                                          </ factor >
+                                                        </ term >
+                                                      </ comparison >
+                                                    </ not test >
+                                                  </ and test >
+                                                </ expr >
+                                              </ argument >
+                                            </ primary suffix >
+                                          </ primary >
+                                        </ factor >
+                                      </ term >
+                                    </ comparison >
+                                  </ not test >
+                                </ and test >
+                              </ expr >
+  32:              line_buf = ''
+                            </ expr stmt >
+                          </ statement >
+                          < statement >
+                            < assign >
+                              < name >
+                              </ name >
+                              < expr >
+                                < and test >
+                                  < not test >
+                                    < comparison >
+                                      < term >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < string >
+                                              </ string >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                      </ term >
+                                    </ comparison >
+                                  </ not test >
+                                </ and test >
+                              </ expr >
+  33:           line_buf = line_buf + w4(i)
+                            </ assign >
+                          </ statement >
+                        </ suite >
+                      </ if >
+                    </ statement >
+                    < statement >
+                      < assign >
+                        < name >
+                        </ name >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < name >
+                                        </ name >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                  < term op >
+                                  </ term op >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < name >
+                                        </ name >
+                                      </ atom >
+                                      < primary suffix >
+                                        < argument >
+                                          < expr >
+                                            < and test >
+                                              < not test >
+                                                < comparison >
+                                                  < term >
+                                                    < factor >
+                                                      < primary >
+                                                        < atom >
+                                                          < name >
+                                                          </ name >
+                                                        </ atom >
+                                                      </ primary >
+                                                    </ factor >
+                                                  </ term >
+                                                </ comparison >
+                                              </ not test >
+                                            </ and test >
+                                          </ expr >
+                                        </ argument >
+                                      </ primary suffix >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+  34:           n_printed = n_printed + 1
+                      </ assign >
+                    </ statement >
+                    < statement >
+                      < assign >
+                        < name >
+                        </ name >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < name >
+                                        </ name >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                  < term op >
+                                  </ term op >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+  35:     print(line_buf)
+                      </ assign >
+                    </ statement >
+                  </ suite >
+                </ if >
+              </ statement >
+            </ suite >
+          </ for >
+        </ statement >
+        < statement >
+          < expr stmt >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < name >
+                            </ name >
+                          </ atom >
+                          < primary suffix >
+                            < argument >
+                              < expr >
+                                < and test >
+                                  < not test >
+                                    < comparison >
+                                      < term >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                      </ term >
+                                    </ comparison >
+                                  </ not test >
+                                </ and test >
+                              </ expr >
+                            </ argument >
+                          </ primary suffix >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+  36: 
+  37: 
+  38: find_primes()
+          </ expr stmt >
+        </ statement >
+      </ suite >
+    </ func def >
+  </ statement >
+  < statement >
+    < expr stmt >
+      < expr >
+        < and test >
+          < not test >
+            < comparison >
+              < term >
+                < factor >
+                  < primary >
+                    < atom >
+                      < name >
+                      </ name >
+                    </ atom >
+                    < primary suffix >
+                      < argument >
+                      </ argument >
+                    </ primary suffix >
+                  </ primary >
+                </ factor >
+              </ term >
+            </ comparison >
+          </ not test >
+        </ and test >
+      </ expr >
+  39: list_primes()
+    </ expr stmt >
+  </ statement >
+  < statement >
+    < expr stmt >
+      < expr >
+        < and test >
+          < not test >
+            < comparison >
+              < term >
+                < factor >
+                  < primary >
+                    < atom >
+                      < name >
+                      </ name >
+                    </ atom >
+                    < primary suffix >
+                      < argument >
+                      </ argument >
+                    </ primary suffix >
+                  </ primary >
+                </ factor >
+              </ term >
+            </ comparison >
+          </ not test >
+        </ and test >
+      </ expr >
+    </ expr stmt >
+  </ statement >
+</ program >
+PP> n = 1000
+PP> primes = [True] * (n + 1)
+PP>  
+PP> def find_primes():
+PP>   for i1 in range(2, n + 1):
+PP>     i2 = 2 * i1
+PP>     while i2 <= n :
+PP>       primes[i2] = False
+PP>       i2 = i2 + i1
+PP>  
+PP>  
+PP> def w4(n):
+PP>   if n <= 9:
+PP>     return "   " + str(n)
+PP>   elif n <= 99:
+PP>     return "  " + str(n)
+PP>   elif n <= 999:
+PP>     return " " + str(n)
+PP>   else:
+PP>     return str(n)
+PP>  
+PP>  
+PP> def list_primes():
+PP>   n_printed = 0
+PP>   line_buf = ""
+PP>   for i in range(2, n + 1):
+PP>     if primes[i]:
+PP>       if n_printed > 0 and n_printed % 10 == 0:
+PP>         print(line_buf)
+PP>         line_buf = ""
+PP>       line_buf = line_buf + w4(i)
+PP>       n_printed = n_printed + 1
+PP>   print(line_buf)
+PP>  
+PP> find_primes()
+PP> list_primes()

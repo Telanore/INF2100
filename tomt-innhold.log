@@ -1,0 +1,11 @@
+< program >
+   1: # Dette programmet definerer en funksjon uten noe innhold; det er ikke lov.
+   2: 
+   3: def f():
+  < statement >
+    < func def >
+      < name >
+      </ name >
+      < suite >
+   4: 
+Asp parser error on line 4: Expected INDENT but found NEWLINE!

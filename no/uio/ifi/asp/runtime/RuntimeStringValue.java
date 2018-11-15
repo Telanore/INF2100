@@ -67,25 +67,26 @@ public class RuntimeStringValue extends RuntimeValue {
 
     @Override
     public RuntimeValue evalEqual(RuntimeValue v, AspSyntax where){
-        if(v instanceof RuntimeStringValue || v instanceof RuntimeNameValue){
+        if(v instanceof RuntimeStringValue){
             return new RuntimeBoolValue(value.equals(v.getStringValue("== op", where)));
+        }else if(v instanceof RuntimeNoneValue){
+            return new RuntimeBoolValue(false);
         }
         return new RuntimeBoolValue(false);    
     }
 
     @Override
     public RuntimeValue evalNotEqual(RuntimeValue v, AspSyntax where){
-        if(v instanceof RuntimeStringValue || v instanceof RuntimeNameValue){
-            return new RuntimeBoolValue(!value.equals(v.getStringValue("!= op", where)));
-        }
-        runtimeError("Type error for !=.", where);
-        return null;    
+        return evalEqual(v, where).evalNot(where);
     }
 
     @Override
     public RuntimeValue evalLess(RuntimeValue v, AspSyntax where){
-        if(v instanceof RuntimeStringValue || v instanceof RuntimeNameValue){
-            return new RuntimeBoolValue(value.length() < v.getStringValue("< op",where).length());
+        if(v instanceof RuntimeStringValue){
+            String s = v.getStringValue("<= op", where);
+            int x = value.compareTo(s);
+            if(x < 0) return new RuntimeBoolValue(true);
+            return new RuntimeBoolValue(false);
         }
         runtimeError("Type error for <.", where);
         return null;
@@ -93,28 +94,47 @@ public class RuntimeStringValue extends RuntimeValue {
 
     @Override
     public RuntimeValue evalLessEqual(RuntimeValue v, AspSyntax where){
-        if(v instanceof RuntimeStringValue || v instanceof RuntimeNameValue){
-            return new RuntimeBoolValue(value.length() <= v.getStringValue("< op",where).length());
+        if(v instanceof RuntimeStringValue){
+            String s = v.getStringValue("<= op", where);
+            int x = value.compareTo(s);
+            if(x <= 0) return new RuntimeBoolValue(true);
+            return new RuntimeBoolValue(false);
         }
-        runtimeError("Type error for <.", where);
+        runtimeError("Type error for <=.", where);
         return null;
     }
 
     @Override
     public RuntimeValue evalGreater(RuntimeValue v, AspSyntax where){
-        if(v instanceof RuntimeStringValue || v instanceof RuntimeNameValue){
-            return new RuntimeBoolValue(value.length() > v.getStringValue("< op",where).length());
+        if(v instanceof RuntimeStringValue){
+            String s = v.getStringValue("<= op", where);
+            int x = value.compareTo(s);
+            if(x > 0) return new RuntimeBoolValue(true);
+            return new RuntimeBoolValue(false);
         }
-        runtimeError("Type error for <.", where);
+        runtimeError("Type error for >.", where);
         return null;
     }
 
     @Override
     public RuntimeValue evalGreaterEqual(RuntimeValue v, AspSyntax where){
-        if(v instanceof RuntimeStringValue || v instanceof RuntimeNameValue){
-            return new RuntimeBoolValue(value.length() >= v.getStringValue("< op",where).length());
+        if(v instanceof RuntimeStringValue){
+            String s = v.getStringValue("<= op", where);
+            int x = value.compareTo(s);
+            if(x >= 0) return new RuntimeBoolValue(true);
+            return new RuntimeBoolValue(false);
         }
-        runtimeError("Type error for <.", where);
+        runtimeError("Type error for >=.", where);
+        return null;
+    }
+
+    @Override
+    public RuntimeValue evalSubscription(RuntimeValue v, AspSyntax where){
+        if(v instanceof RuntimeIntValue){
+            int index = (int)v.getIntValue("subscription", where);
+            return new RuntimeStringValue(Character.toString(value.charAt(index)));
+        }
+        runtimeError("Type error for subscription.", where);
         return null;
     }
 

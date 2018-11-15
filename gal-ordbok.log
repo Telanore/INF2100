@@ -1,0 +1,83 @@
+< program >
+   1: # Alle nøkler i en ordbok må være tekstliteraler.
+   2: 
+   3: t = "Vet ikke"
+  < statement >
+    < assign >
+      < name >
+      </ name >
+      < expr >
+        < and test >
+          < not test >
+            < comparison >
+              < term >
+                < factor >
+                  < primary >
+                    < atom >
+                      < string >
+                      </ string >
+                    </ atom >
+                  </ primary >
+                </ factor >
+              </ term >
+            </ comparison >
+          </ not test >
+        </ and test >
+      </ expr >
+    </ assign >
+  </ statement >
+   4: d = { "Ja": 17, "Nei": 2, t: 0 }
+  < statement >
+    < assign >
+      < name >
+      </ name >
+      < expr >
+        < and test >
+          < not test >
+            < comparison >
+              < term >
+                < factor >
+                  < primary >
+                    < atom >
+                      < dict >
+                        < string >
+                        </ string >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                        < string >
+                        </ string >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+Asp parser error on line 4: Expected string literal, but found name

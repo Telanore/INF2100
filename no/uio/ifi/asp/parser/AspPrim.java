@@ -45,6 +45,16 @@ class AspPrim extends AspSyntax{
     @Override
     RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
         RuntimeValue v = a.eval(curScope);
+        if(primSufs.size() > 0){
+            for(int i = 0; i < primSufs.size(); i++){
+                RuntimeValue w = primSufs.get(i).eval(curScope);
+                if(primSufs.get(i) instanceof AspSubs){
+                    v = v.evalSubscription(w, this);
+                }
+            }
+
+
+        }
         return v;
     }
 

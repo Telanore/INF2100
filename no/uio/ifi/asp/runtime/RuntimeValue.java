@@ -40,7 +40,7 @@ public abstract class RuntimeValue {
         return null;
     }
 
-    public HashMap<RuntimeValue, RuntimeValue> getDictValue(String what, AspSyntax where){
+    public HashMap<String, RuntimeValue> getDictValue(String what, AspSyntax where){
         runtimeError("Type error: "+what+" is not a dictionary!", where);
         return null;
     }

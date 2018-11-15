@@ -1,0 +1,115 @@
+< program >
+   1: # Dette programmet mangler kolonet i else-grenen av en if-setning.
+   2: 
+   3: if 1+2+3+4 == 10:
+  < statement >
+    < if >
+      < expr >
+        < and test >
+          < not test >
+            < comparison >
+              < term >
+                < factor >
+                  < primary >
+                    < atom >
+                      < integer >
+                      </ integer >
+                    </ atom >
+                  </ primary >
+                </ factor >
+                < term op >
+                </ term op >
+                < factor >
+                  < primary >
+                    < atom >
+                      < integer >
+                      </ integer >
+                    </ atom >
+                  </ primary >
+                </ factor >
+                < term op >
+                </ term op >
+                < factor >
+                  < primary >
+                    < atom >
+                      < integer >
+                      </ integer >
+                    </ atom >
+                  </ primary >
+                </ factor >
+                < term op >
+                </ term op >
+                < factor >
+                  < primary >
+                    < atom >
+                      < integer >
+                      </ integer >
+                    </ atom >
+                  </ primary >
+                </ factor >
+              </ term >
+              < comp op >
+              </ comp op >
+              < term >
+                < factor >
+                  < primary >
+                    < atom >
+                      < integer >
+                      </ integer >
+                    </ atom >
+                  </ primary >
+                </ factor >
+              </ term >
+            </ comparison >
+          </ not test >
+        </ and test >
+      </ expr >
+      < suite >
+   4:     print("Ja")
+        < statement >
+          < expr stmt >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < name >
+                            </ name >
+                          </ atom >
+                          < primary suffix >
+                            < argument >
+                              < expr >
+                                < and test >
+                                  < not test >
+                                    < comparison >
+                                      < term >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < string >
+                                              </ string >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                      </ term >
+                                    </ comparison >
+                                  </ not test >
+                                </ and test >
+                              </ expr >
+                            </ argument >
+                          </ primary suffix >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+          </ expr stmt >
+        </ statement >
+   5: else
+      </ suite >
+Asp parser error on line 5: Expected : but found NEWLINE!

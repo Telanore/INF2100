@@ -51,9 +51,9 @@ public class AspExpr extends AspSyntax{
         for(int i = 1; i < andTests.size(); i++){
             RuntimeValue w = andTests.get(i).eval(curScope);
             if(v.getBoolValue("|| operand", this) || w.getBoolValue("|| operand", this)){
-                v = new RuntimeBoolValue(true);
+                v = w;
             }else{
-                return new RuntimeBoolValue(false);
+                return w;
             }
         }
         return v;

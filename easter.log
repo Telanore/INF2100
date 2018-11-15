@@ -1,0 +1,1314 @@
+< program >
+   1: # Finn 1. påskedag for årene 2015-2020.
+   2: 
+   3: M_name = [""] * (12+1)
+  < statement >
+    < assign >
+      < name >
+      </ name >
+      < expr >
+        < and test >
+          < not test >
+            < comparison >
+              < term >
+                < factor >
+                  < primary >
+                    < atom >
+                      < list >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < string >
+                                        </ string >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                      </ list >
+                    </ atom >
+                  </ primary >
+                  < factor op >
+                  </ factor op >
+                  < primary >
+                    < atom >
+                      < inner expr >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                  < term op >
+                                  </ term op >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                      </ inner expr >
+                    </ atom >
+                  </ primary >
+                </ factor >
+              </ term >
+            </ comparison >
+          </ not test >
+        </ and test >
+      </ expr >
+    </ assign >
+  </ statement >
+   4: M_name[3] = "mars"
+  < statement >
+    < assign >
+      < name >
+      </ name >
+      < expr >
+        < and test >
+          < not test >
+            < comparison >
+              < term >
+                < factor >
+                  < primary >
+                    < atom >
+                      < list >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                      </ list >
+                    </ atom >
+                  </ primary >
+                </ factor >
+              </ term >
+            </ comparison >
+          </ not test >
+        </ and test >
+      </ expr >
+      < expr >
+        < and test >
+          < not test >
+            < comparison >
+              < term >
+                < factor >
+                  < primary >
+                    < atom >
+                      < string >
+                      </ string >
+                    </ atom >
+                  </ primary >
+                </ factor >
+              </ term >
+            </ comparison >
+          </ not test >
+        </ and test >
+      </ expr >
+    </ assign >
+  </ statement >
+   5: M_name[4] = "april"
+  < statement >
+    < assign >
+      < name >
+      </ name >
+      < expr >
+        < and test >
+          < not test >
+            < comparison >
+              < term >
+                < factor >
+                  < primary >
+                    < atom >
+                      < list >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                      </ list >
+                    </ atom >
+                  </ primary >
+                </ factor >
+              </ term >
+            </ comparison >
+          </ not test >
+        </ and test >
+      </ expr >
+      < expr >
+        < and test >
+          < not test >
+            < comparison >
+              < term >
+                < factor >
+                  < primary >
+                    < atom >
+                      < string >
+                      </ string >
+                    </ atom >
+                  </ primary >
+                </ factor >
+              </ term >
+            </ comparison >
+          </ not test >
+        </ and test >
+      </ expr >
+    </ assign >
+  </ statement >
+   6: 
+   7: for y in [2017, 2018, 2019, 2020, 2021]:
+  < statement >
+    < for >
+      < name >
+      </ name >
+      < expr >
+        < and test >
+          < not test >
+            < comparison >
+              < term >
+                < factor >
+                  < primary >
+                    < atom >
+                      < list >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                      </ list >
+                    </ atom >
+                  </ primary >
+                </ factor >
+              </ term >
+            </ comparison >
+          </ not test >
+        </ and test >
+      </ expr >
+      < suite >
+   8:    a = y % 19
+        < statement >
+          < assign >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < name >
+                            </ name >
+                          </ atom >
+                        </ primary >
+                        < factor op >
+                        </ factor op >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+          </ assign >
+        </ statement >
+   9:    b = y // 100
+        < statement >
+          < assign >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < name >
+                            </ name >
+                          </ atom >
+                        </ primary >
+                        < factor op >
+                        </ factor op >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+          </ assign >
+        </ statement >
+  10:    c = y % 100
+        < statement >
+          < assign >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < name >
+                            </ name >
+                          </ atom >
+                        </ primary >
+                        < factor op >
+                        </ factor op >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+          </ assign >
+        </ statement >
+  11:    d = b // 4
+        < statement >
+          < assign >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < name >
+                            </ name >
+                          </ atom >
+                        </ primary >
+                        < factor op >
+                        </ factor op >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+          </ assign >
+        </ statement >
+  12:    e = b % 4
+        < statement >
+          < assign >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < name >
+                            </ name >
+                          </ atom >
+                        </ primary >
+                        < factor op >
+                        </ factor op >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+          </ assign >
+        </ statement >
+  13:    f = (b+8) // 25
+        < statement >
+          < assign >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < inner expr >
+                              < expr >
+                                < and test >
+                                  < not test >
+                                    < comparison >
+                                      < term >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < integer >
+                                              </ integer >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                      </ term >
+                                    </ comparison >
+                                  </ not test >
+                                </ and test >
+                              </ expr >
+                            </ inner expr >
+                          </ atom >
+                        </ primary >
+                        < factor op >
+                        </ factor op >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+          </ assign >
+        </ statement >
+  14:    g = (b-f+1) // 3
+        < statement >
+          < assign >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < inner expr >
+                              < expr >
+                                < and test >
+                                  < not test >
+                                    < comparison >
+                                      < term >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < integer >
+                                              </ integer >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                      </ term >
+                                    </ comparison >
+                                  </ not test >
+                                </ and test >
+                              </ expr >
+                            </ inner expr >
+                          </ atom >
+                        </ primary >
+                        < factor op >
+                        </ factor op >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+          </ assign >
+        </ statement >
+  15:    h = (19*a+b-d-g+15) % 30
+        < statement >
+          < assign >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < inner expr >
+                              < expr >
+                                < and test >
+                                  < not test >
+                                    < comparison >
+                                      < term >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < integer >
+                                              </ integer >
+                                            </ atom >
+                                          </ primary >
+                                          < factor op >
+                                          </ factor op >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < integer >
+                                              </ integer >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                      </ term >
+                                    </ comparison >
+                                  </ not test >
+                                </ and test >
+                              </ expr >
+                            </ inner expr >
+                          </ atom >
+                        </ primary >
+                        < factor op >
+                        </ factor op >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+          </ assign >
+        </ statement >
+  16:    i = c // 4
+        < statement >
+          < assign >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < name >
+                            </ name >
+                          </ atom >
+                        </ primary >
+                        < factor op >
+                        </ factor op >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+          </ assign >
+        </ statement >
+  17:    k = c % 4
+        < statement >
+          < assign >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < name >
+                            </ name >
+                          </ atom >
+                        </ primary >
+                        < factor op >
+                        </ factor op >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+          </ assign >
+        </ statement >
+  18:    l = (32+2*e+2*i-h-k) % 7
+        < statement >
+          < assign >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < inner expr >
+                              < expr >
+                                < and test >
+                                  < not test >
+                                    < comparison >
+                                      < term >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < integer >
+                                              </ integer >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < integer >
+                                              </ integer >
+                                            </ atom >
+                                          </ primary >
+                                          < factor op >
+                                          </ factor op >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < integer >
+                                              </ integer >
+                                            </ atom >
+                                          </ primary >
+                                          < factor op >
+                                          </ factor op >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                      </ term >
+                                    </ comparison >
+                                  </ not test >
+                                </ and test >
+                              </ expr >
+                            </ inner expr >
+                          </ atom >
+                        </ primary >
+                        < factor op >
+                        </ factor op >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+          </ assign >
+        </ statement >
+  19:    m = (a+11*h+22*l) // 451
+        < statement >
+          < assign >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < inner expr >
+                              < expr >
+                                < and test >
+                                  < not test >
+                                    < comparison >
+                                      < term >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < integer >
+                                              </ integer >
+                                            </ atom >
+                                          </ primary >
+                                          < factor op >
+                                          </ factor op >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < integer >
+                                              </ integer >
+                                            </ atom >
+                                          </ primary >
+                                          < factor op >
+                                          </ factor op >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                      </ term >
+                                    </ comparison >
+                                  </ not test >
+                                </ and test >
+                              </ expr >
+                            </ inner expr >
+                          </ atom >
+                        </ primary >
+                        < factor op >
+                        </ factor op >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+          </ assign >
+        </ statement >
+  20: 
+  21:    month = (h+l-7*m+114) // 31
+        < statement >
+          < assign >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < inner expr >
+                              < expr >
+                                < and test >
+                                  < not test >
+                                    < comparison >
+                                      < term >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < integer >
+                                              </ integer >
+                                            </ atom >
+                                          </ primary >
+                                          < factor op >
+                                          </ factor op >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < integer >
+                                              </ integer >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                      </ term >
+                                    </ comparison >
+                                  </ not test >
+                                </ and test >
+                              </ expr >
+                            </ inner expr >
+                          </ atom >
+                        </ primary >
+                        < factor op >
+                        </ factor op >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+          </ assign >
+        </ statement >
+  22:    day = (h+l-7*m+114) % 31 + 1
+        < statement >
+          < assign >
+            < name >
+            </ name >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < inner expr >
+                              < expr >
+                                < and test >
+                                  < not test >
+                                    < comparison >
+                                      < term >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < integer >
+                                              </ integer >
+                                            </ atom >
+                                          </ primary >
+                                          < factor op >
+                                          </ factor op >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < integer >
+                                              </ integer >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                      </ term >
+                                    </ comparison >
+                                  </ not test >
+                                </ and test >
+                              </ expr >
+                            </ inner expr >
+                          </ atom >
+                        </ primary >
+                        < factor op >
+                        </ factor op >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                      < term op >
+                      </ term op >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < integer >
+                            </ integer >
+                          </ atom >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+          </ assign >
+        </ statement >
+  23:    print(str(day) + ". " + M_name[month], y)
+        < statement >
+          < expr stmt >
+            < expr >
+              < and test >
+                < not test >
+                  < comparison >
+                    < term >
+                      < factor >
+                        < primary >
+                          < atom >
+                            < name >
+                            </ name >
+                          </ atom >
+                          < primary suffix >
+                            < argument >
+                              < expr >
+                                < and test >
+                                  < not test >
+                                    < comparison >
+                                      < term >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                            < primary suffix >
+                                              < argument >
+                                                < expr >
+                                                  < and test >
+                                                    < not test >
+                                                      < comparison >
+                                                        < term >
+                                                          < factor >
+                                                            < primary >
+                                                              < atom >
+                                                                < name >
+                                                                </ name >
+                                                              </ atom >
+                                                            </ primary >
+                                                          </ factor >
+                                                        </ term >
+                                                      </ comparison >
+                                                    </ not test >
+                                                  </ and test >
+                                                </ expr >
+                                              </ argument >
+                                            </ primary suffix >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < string >
+                                              </ string >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                        < term op >
+                                        </ term op >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                            < primary suffix >
+                                              < subscrpt >
+                                                < expr >
+                                                  < and test >
+                                                    < not test >
+                                                      < comparison >
+                                                        < term >
+                                                          < factor >
+                                                            < primary >
+                                                              < atom >
+                                                                < name >
+                                                                </ name >
+                                                              </ atom >
+                                                            </ primary >
+                                                          </ factor >
+                                                        </ term >
+                                                      </ comparison >
+                                                    </ not test >
+                                                  </ and test >
+                                                </ expr >
+                                              </ subscrpt >
+                                            </ primary suffix >
+                                          </ primary >
+                                        </ factor >
+                                      </ term >
+                                    </ comparison >
+                                  </ not test >
+                                </ and test >
+                              </ expr >
+                              < expr >
+                                < and test >
+                                  < not test >
+                                    < comparison >
+                                      < term >
+                                        < factor >
+                                          < primary >
+                                            < atom >
+                                              < name >
+                                              </ name >
+                                            </ atom >
+                                          </ primary >
+                                        </ factor >
+                                      </ term >
+                                    </ comparison >
+                                  </ not test >
+                                </ and test >
+                              </ expr >
+                            </ argument >
+                          </ primary suffix >
+                        </ primary >
+                      </ factor >
+                    </ term >
+                  </ comparison >
+                </ not test >
+              </ and test >
+            </ expr >
+          </ expr stmt >
+        </ statement >
+      </ suite >
+    </ for >
+  </ statement >
+</ program >
+PP> M_name = [""] * (12 + 1)
+PP> M_name[3] = "mars"
+PP> M_name[4] = "april"
+PP> for y in [2017, 2018, 2019, 2020, 2021]:
+PP> 	a = y % 19
+PP> 	b = y // 100
+PP> 	c = y % 100
+PP> 	d = b // 4
+PP> 	e = b % 4
+PP> 	f = (b + 8) // 25
+PP> 	g = (b - f + 1) // 3
+PP> 	h = (19 * a + b - d - g + 15) % 30
+PP> 	i = c // 4
+PP> 	k = c % 4
+PP> 	l = (32 + 2 * e + 2 * i - h - k) % 7
+PP> 	m = (a + 11 * h + 22 * l) // 451
+PP> 	month = (h + l - 7 * m + 114) // 31
+PP> 	day = (h + l - 7 * m + 114) % 31 + 1
+PP> 	print(str(day) + ". " + M_name[month], y)

@@ -19,7 +19,7 @@ class AspNone extends AspAtom{
         enterParser(" none ");
         AspNone an = new AspNone(s.curLineNum());
         
-        test(s, noneToken);
+        skip(s, noneToken);
 
         leaveParser(" none ");
         return an;

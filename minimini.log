@@ -1,0 +1,104 @@
+< program >
+   1: lst = [1, 2, 3][1]
+  < statement >
+    < assign >
+      < name >
+      </ name >
+      < expr >
+        < and test >
+          < not test >
+            < comparison >
+              < term >
+                < factor >
+                  < primary >
+                    < atom >
+                      < list >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                      </ list >
+                    </ atom >
+                    < primary suffix >
+                      < subscrpt >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < integer >
+                                        </ integer >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                      </ subscrpt >
+                    </ primary suffix >
+                  </ primary >
+                </ factor >
+              </ term >
+            </ comparison >
+          </ not test >
+        </ and test >
+      </ expr >
+    </ assign >
+  </ statement >
+</ program >
+PP> lst = [1, 2, 3][1]

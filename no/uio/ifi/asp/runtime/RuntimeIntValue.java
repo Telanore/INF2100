@@ -5,7 +5,7 @@ import no.uio.ifi.asp.parser.AspSyntax;
 
 public class RuntimeIntValue extends RuntimeValue {
 
-    private long value;
+    private final long value;
 
     public RuntimeIntValue(long value){
         this.value = value;
@@ -106,9 +106,13 @@ public class RuntimeIntValue extends RuntimeValue {
     @Override
     public RuntimeValue evalModulo(RuntimeValue v, AspSyntax where){
         if(v instanceof RuntimeIntValue){
-            return new RuntimeIntValue(value % v.getIntValue("% op", where));
+            int x = (int)v.getIntValue("% op", where);
+            int mod = Math.floorMod((int)value, x);
+            return new RuntimeIntValue(mod);
         }else if(v instanceof RuntimeFloatValue){
-            return new RuntimeFloatValue(value % v.getFloatValue("% op", where));
+            double x = v.getFloatValue("% op", where);
+            double mod = (int)value-x*Math.floor((int)value/x);
+            return new RuntimeFloatValue(mod);
         }
         runtimeError("Type error for %.", where);
         return null;
@@ -120,7 +124,9 @@ public class RuntimeIntValue extends RuntimeValue {
             return new RuntimeBoolValue(value == v.getIntValue("== op", where));
         }else if(v instanceof RuntimeFloatValue){
             return new RuntimeBoolValue(value == v.getFloatValue("== op", where));
-        }
+        }else if(v instanceof RuntimeNoneValue){
+            return new RuntimeBoolValue(false);
+        }    
         runtimeError("Type error for ==.", where);
         return null;
     }

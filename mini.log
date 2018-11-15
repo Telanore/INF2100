@@ -1,0 +1,92 @@
+< program >
+   1: navn = "Mailinn"
+  < statement >
+    < assign >
+      < name >
+      </ name >
+      < expr >
+        < and test >
+          < not test >
+            < comparison >
+              < term >
+                < factor >
+                  < primary >
+                    < atom >
+                      < string >
+                      </ string >
+                    </ atom >
+                  </ primary >
+                </ factor >
+              </ term >
+            </ comparison >
+          </ not test >
+        </ and test >
+      </ expr >
+   2: print ("Hei, ",navn)
+    </ assign >
+  </ statement >
+  < statement >
+    < expr stmt >
+      < expr >
+        < and test >
+          < not test >
+            < comparison >
+              < term >
+                < factor >
+                  < primary >
+                    < atom >
+                      < name >
+                      </ name >
+                    </ atom >
+                    < primary suffix >
+                      < argument >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < string >
+                                        </ string >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                        < expr >
+                          < and test >
+                            < not test >
+                              < comparison >
+                                < term >
+                                  < factor >
+                                    < primary >
+                                      < atom >
+                                        < name >
+                                        </ name >
+                                      </ atom >
+                                    </ primary >
+                                  </ factor >
+                                </ term >
+                              </ comparison >
+                            </ not test >
+                          </ and test >
+                        </ expr >
+                      </ argument >
+                    </ primary suffix >
+                  </ primary >
+                </ factor >
+              </ term >
+            </ comparison >
+          </ not test >
+        </ and test >
+      </ expr >
+    </ expr stmt >
+  </ statement >
+</ program >
+PP> navn = "Mailinn"
+PP> print("Hei, ", navn)
